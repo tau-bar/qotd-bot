@@ -8,7 +8,7 @@ import random
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
-cred = credentials.Certificate("./key.json")
+cred = credentials.Certificate("INSERT FIREBASE CERTIFICATE HERE")
 firebase_admin.initialize_app(cred)
 
 firestore_db = firestore.client()
@@ -20,14 +20,14 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 PORT = int(os.environ.get('PORT', '8443'))
-TOKEN = "1452285290:AAETh1BiY2nykuLVp0eh5i9QEIpZL3VvDXg"
+TOKEN = """insert telegram token here"""
 
 
 # Define a few command handlers. These usually take the two arguments update and
 # context. Error handlers also receive the raised TelegramError object in error.
 def start(update, context):
     """Send a message when the command /start is issued."""
-    update.message.reply_text('Hi! This is the Izzu Quote Generator! To be inspired, try typing /inspireme! To see other commands, type /help!')
+    update.message.reply_text('Hi! This is the Quote Generator bot! To be inspired, try typing /inspireme! To see other commands, type /help!')
 
 def help(update, context):
     """Send a message when the command /help is issued."""
@@ -88,7 +88,7 @@ def main():
                           port=PORT,
                           url_path=TOKEN)
 
-    updater.bot.set_webhook("https://iqotd-bot.herokuapp.com/" + TOKEN)
+    updater.bot.set_webhook("""insert APP_NAME here""" + TOKEN)
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT. This should be used most of the time, since
