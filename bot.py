@@ -88,7 +88,7 @@ def main():
                           port=PORT,
                           url_path=TOKEN)
 
-    updater.bot.set_webhook("iqotd-bot" + TOKEN)
+    updater.bot.set_webhook("https://iqotd-bot.herokuapp.com/" + TOKEN)
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT. This should be used most of the time, since
