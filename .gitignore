@@ -1,9 +1,0 @@
-data_reader.py
-key.json
-Pipfile
-Pipfile.lock
-Procfile
-Procfile.swp
-requirements.txt
-result.json
-.vscode
